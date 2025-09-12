@@ -10,5 +10,6 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "nxConsole.generateAiAgentRules": true
+  "nxConsole.generateAiAgentRules": true,
+  "conventionalCommits.scopes": ["plantuml-cli"]
 }
