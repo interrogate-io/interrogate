@@ -65,6 +65,7 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
       if (command == null) {
         throw new Error("Could not invoke docker or java")
       }
+      console.log({ command, args })
       const childProcess = spawn(command, args, {
         cwd: normalize(`${__dirname}/../../bin`),
       })
