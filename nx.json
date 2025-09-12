@@ -1,0 +1,33 @@
+{
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "check-dependencies": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "format": {
+      "cache": true,
+      "dependsOn": ["lint"]
+    },
+    "lint": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/coverage"]
+    },
+    "test-ui": {
+      "dependsOn": ["^build"]
+    },
+    "typecheck": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@interrogate/tools",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "check-dependencies": "lerna run check-dependencies",
+    "commitlint": "commitlint --edit",
+    "deep-clean": "git clean -fdX -e !ssl/*",
+    "format": "lerna run format",
+    "generate-cert": "npx --yes mkcert create-ca && npx --yes mkcert create-cert --key ssl/server.key --cert ssl/server.crt && rm ca.key ca.cert",
+    "lerna": "lerna",
+    "lint": "lerna run lint",
+    "prepare": "husky",
+    "test": "lerna run test",
+    "typecheck": "lerna run typecheck"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/config-workspace-scopes": "19.8.1",
+    "@eslint/js": "9.35.0",
+    "@tsconfig/vite-react": "7.0.1",
+    "@types/node": "24.3.1",
+    "@vitest/coverage-v8": "3.2.4",
+    "@vitest/ui": "3.2.4",
+    "dependency-cruiser": "17.0.1",
+    "esbuild": "0.25.9",
+    "eslint": "9.35.0",
+    "eslint-config-prettier": "10.1.8",
+    "husky": "9.1.7",
+    "jiti": "2.5.1",
+    "lerna": "8.2.3",
+    "prettier": "3.6.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "rehype": "13.0.2",
+    "rehype-stringify": "10.0.1",
+    "remark": "15.0.1",
+    "remark-parse": "11.0.0",
+    "remark-rehype": "11.1.2",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.43.0",
+    "unified": "11.0.5",
+    "vite": "7.1.5",
+    "vitest": "3.2.4"
+  }
+}
