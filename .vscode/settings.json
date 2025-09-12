@@ -1,4 +1,5 @@
 {
+  "conventionalCommits.scopes": ["plantuml-cli", "plantuml-to-svg"],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
@@ -9,7 +10,6 @@
   "editor.tabSize": 2,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
   "nxConsole.generateAiAgentRules": true,
-  "conventionalCommits.scopes": ["plantuml-cli"]
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
