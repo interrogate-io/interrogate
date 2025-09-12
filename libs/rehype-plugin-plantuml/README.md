@@ -1,15 +1,14 @@
 # @interrogate/rehype-plugin-plantuml
 
-[![NPM version][npm-badge]][npm-url] [![LICENSE][license-badge]][license-url]
+[![NPM version][npm-badge]][npm-url] [![License: MIT][license-badge]][license-url]
 
-[Rehype][rehype] plugin to process PlantUML diagrams into SVG during HTML transformation.
+Transform PlantUML diagrams into SVG during HTML transformation with [Rehype][rehype].
 
-## Contents
+## Quick reference
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [API](#api)
-- [License](#license)
+- **Package**: [@interrogate/rehype-plugin-plantuml][npm-url]
+- **Maintained by**: [interrogate-io](https://github.com/interrogate-io)
+- **Issues**: [GitHub Issues](https://github.com/interrogate-io/interrogate/issues)
 
 ## Installation
 
@@ -23,7 +22,22 @@ For optimal use with Markdown processing, also install:
 npm install @interrogate/remark-plugin-plantuml
 ```
 
+## What is this?
+
+A [Rehype][rehype] plugin that converts PlantUML diagram nodes into SVG during HTML transformation.
+It works in conjunction with [@interrogate/remark-plugin-plantuml][remark-plantuml] to provide a
+complete Markdown-to-HTML transformation pipeline for PlantUML diagrams.
+
+## When should I use this?
+
+- When you need to convert PlantUML diagrams to SVG in your HTML processing pipeline
+- When you're using Rehype for HTML transformations
+- As part of a documentation system that includes PlantUML diagrams
+- In combination with [@interrogate/remark-plugin-plantuml][remark-plantuml] for Markdown processing
+
 ## Usage
+
+Basic usage with Rehype:
 
 ```js
 import rehype from "rehype"
@@ -36,11 +50,8 @@ const result = await rehype().use(rehypePlantuml).process(/* your HTML */)
 
 ### `rehype().use(rehypePlantuml[, options])`
 
-Transform PlantUML diagram nodes into SVG during the HTML transformation process.
-
-This plugin is designed to work in conjunction with
-[@interrogate/remark-plugin-plantuml][remark-plantuml] for a complete Markdown to HTML
-transformation pipeline.
+Transform PlantUML diagram nodes into SVG during the HTML transformation process. Options
+documentation coming soon.
 
 ## License
 
@@ -49,6 +60,6 @@ transformation pipeline.
 [npm-badge]: https://img.shields.io/npm/v/@interrogate/rehype-plugin-plantuml.svg
 [npm-url]: https://www.npmjs.com/package/@interrogate/rehype-plugin-plantuml
 [license-badge]: https://img.shields.io/npm/l/@interrogate/rehype-plugin-plantuml.svg
-[license-url]: https://github.com/james-lafferty/interrogate/blob/main/LICENSE
+[license-url]: https://github.com/interrogate-io/interrogate/blob/main/LICENSE
 [rehype]: https://github.com/rehypejs/rehype
 [remark-plantuml]: https://www.npmjs.com/package/@interrogate/remark-plugin-plantuml
