@@ -1,25 +1,14 @@
 # @interrogate/plantuml-to-svg
 
-A Node.js package to convert PlantUML markup into SVG format.
+[![NPM version][npm-badge]][npm-url] [![License: MIT][license-badge]][license-url]
 
-## Description
+Convert PlantUML markup to SVG using Docker or JAR-based rendering.
 
-This package provides a simple way to convert PlantUML diagrams into SVG format using either the
-`interrogate/plantuml-cli` Docker image or the PlantUML jar file directly.
+## Quick reference
 
-## Prerequisites
-
-Choose one of the following methods:
-
-### Docker Method
-
-- Docker installed and running on your system
-- Access to pull the `interrogate/plantuml-cli` image
-
-### JAR Method
-
-- Java Runtime Environment (JRE) installed
-- System requirements as specified in [PlantUML's documentation](https://plantuml.com/starting)
+- **Package**: [@interrogate/plantuml-to-svg][npm-url]
+- **Maintained by**: [interrogate-io](https://github.com/interrogate-io)
+- **Issues**: [GitHub Issues](https://github.com/interrogate-io/interrogate/issues)
 
 ## Installation
 
@@ -27,7 +16,35 @@ Choose one of the following methods:
 npm install @interrogate/plantuml-to-svg
 ```
 
+## What is this?
+
+A Node.js package that provides a flexible API for converting PlantUML diagrams into SVG format. It
+supports both Docker-based rendering using `interrogate/plantuml-cli` and direct JAR file execution.
+
+## When should I use this?
+
+- When you need programmatic conversion of PlantUML to SVG in Node.js
+- When you want flexibility between Docker and JAR-based rendering
+- When building tools that process PlantUML diagrams
+- As a dependency for other tools in the PlantUML ecosystem
+
+## Prerequisites
+
+Choose your preferred rendering method:
+
+### Docker Method
+
+- Docker installed and running
+- Access to pull the `interrogate/plantuml-cli` image
+
+### JAR Method
+
+- Java Runtime Environment (JRE) installed
+- System requirements as specified in [PlantUML's documentation](https://plantuml.com/starting)
+
 ## Usage
+
+Basic conversion using Docker (default method):
 
 ```typescript
 import { convertToSvg } from "@interrogate/plantuml-to-svg"
@@ -39,25 +56,31 @@ B -> A: World
 @enduml
 `
 
-// Convert using the default method (Docker)
 const svg = await convertToSvg(plantUmlMarkup)
+```
 
-// Or specify the method explicitly
+Using JAR method explicitly:
+
+```typescript
 const svgUsingJar = await convertToSvg(plantUmlMarkup, { method: "jar" })
 ```
 
-For more examples, please refer to the `test.ts` files in the source code.
+## API
 
-## API Reference
+### `convertToSvg(markup: string, options?: ConversionOptions): Promise<string>`
 
-The main entry point is `src/index.ts`, which exports the following:
+Converts PlantUML markup to SVG format.
 
-- `convertToSvg(markup: string, options?: ConversionOptions): Promise<string>`
+#### Options
+
+- `method`: `"docker" | "jar"` - Rendering method (default: `"docker"`)
+- Additional options documentation coming soon
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[MIT][license-url] © James Lafferty
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+[npm-badge]: https://img.shields.io/npm/v/@interrogate/plantuml-to-svg.svg
+[npm-url]: https://www.npmjs.com/package/@interrogate/plantuml-to-svg
+[license-badge]: https://img.shields.io/npm/l/@interrogate/plantuml-to-svg.svg
+[license-url]: https://github.com/interrogate-io/interrogate/blob/main/LICENSE
