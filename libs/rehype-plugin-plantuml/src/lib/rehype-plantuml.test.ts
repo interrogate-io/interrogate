@@ -1,0 +1,54 @@
+import remarkPlantUML from "@interrogate/remark-plugin-plantuml"
+import { dirname, normalize } from "path"
+import rehypeStringify from "rehype-stringify"
+import remarkParse from "remark-parse"
+import remarkRehype from "remark-rehype"
+import { read } from "to-vfile"
+import { unified } from "unified"
+import { fileURLToPath } from "url"
+import { describe, expect, it, vi } from "vitest"
+import rehypePlantUML from "./rehype-plantuml.js"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+vi.mock("@interrogate/plantuml-to-svg", () => ({
+  plantUMLToSVG: vi.fn(() => "<svg />"),
+}))
+describe("rehypePlantUML", () => {
+  it("should find ```plantuml ...``` plantuml code blocks and add svg image nodes before them", async () => {
+    const { value } = await unified()
+      .use(remarkParse)
+      .use(remarkPlantUML)
+      .use(remarkRehype)
+      .use(rehypePlantUML)
+      .use(rehypeStringify)
+      .process("```plantuml\nA -> B: Hello\n```")
+    expect(value).toBe(
+      '<figure><svg></svg><pre><code class="language-plantuml">A -> B: Hello\n</code></pre></figure>',
+    )
+  })
+  it("should inline external diagrams as svgs", async () => {
+    const { value } = await unified()
+      .use(remarkParse)
+      .use(remarkPlantUML)
+      .use(remarkRehype)
+      .use(rehypePlantUML)
+      .use(rehypeStringify)
+      .process(await read(normalize(`${__dirname}/../../assets/markdown.md`)))
+    expect(value)
+      .toBe(`<p><figure><svg></svg><pre><code class="language-plantuml">@startuml "hello diagram"
+A -> B: Hello
+@enduml
+</code></pre></figure></p>`)
+  })
+  it("should find throw an error for invalid links", async () => {
+    await expect(async () =>
+      unified()
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypePlantUML)
+        .use(rehypeStringify)
+        .process(await read(normalize(`${__dirname}/../../assets/markdown-error.md`))),
+    ).rejects.toThrow()
+  })
+})

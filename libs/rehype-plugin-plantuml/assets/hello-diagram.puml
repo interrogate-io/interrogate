@@ -1,0 +1,3 @@
+@startuml "hello diagram"
+A -> B: Hello
+@enduml
