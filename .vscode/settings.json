@@ -1,5 +1,5 @@
 {
-  "conventionalCommits.scopes": ["plantuml-cli", "plantuml-to-svg"],
+  "conventionalCommits.scopes": ["plantuml-cli", "plantuml-to-svg", "remark-plugin-plantuml"],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
