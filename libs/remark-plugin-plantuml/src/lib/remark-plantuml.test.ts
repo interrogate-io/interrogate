@@ -1,5 +1,6 @@
-import type { Root } from "mdast"
+import type { ImageReference, Root } from "mdast"
 import { remark } from "remark"
+import { visit } from "unist-util-visit"
 import { describe, expect, it, vi } from "vitest"
 import remarkPlantUML from "./remark-plantuml.js"
 
@@ -52,15 +53,31 @@ describe("remarkPlantUML", () => {
     )
   })
   it("should find image references that have a .puml suffix", async () => {
-    const { value } = await remark()
+    const imageReferenceVisitor = vi.fn((node: ImageReference, ...rest) => {
+      console.log(rest.length)
+      console.log(node)
+    })
+    const nextPlugin = vi.fn((tree: Root) => {
+      visit(tree, "imageReference", imageReferenceVisitor)
+      return tree
+    })
+    await remark()
       .use(remarkPlantUML)
+      .use(() => nextPlugin)
       .process(
         '![hello diagram][hello-diagram]\n\n[hello-diagram]: ./assets/hello-diagram.puml "Hello, diagram"\n![hello, diagram][hello-diagram]',
       )
-    console.log(value)
-    expect(true).toBe(true)
-    // expect(value).toBe(
-    //   '![hello diagram][hello-diagram]\n\n[hello-diagram]: data:image/svg+xml;base64,PHN2ZyAvPg== "Hello, diagram"\n'
-    // );
+    expect(imageReferenceVisitor).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: {
+          hProperties: {
+            dataPlantumlcode: '@startuml "hello diagram"\nA -> B: Hello\n@enduml\n',
+            dataPlantumlsvg: "<svg />",
+          },
+        },
+      }),
+      expect.anything(),
+      expect.anything(),
+    )
   })
 })
