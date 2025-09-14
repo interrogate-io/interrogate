@@ -63,5 +63,5 @@ describe("plantuml-cli Docker image", () => {
       { threshold: 0.1 },
     )
     expect(pixelDelta).toBe(0)
-  }, 20000)
+  })
 })
