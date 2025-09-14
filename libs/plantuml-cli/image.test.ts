@@ -21,7 +21,7 @@ const runPlantUML = async ({
   new Promise<void>((resolve, reject) => {
     const childProcess = spawn(
       "docker",
-      ["run", "--rm", "-v", `${assetsDirectory}:/data`, "-i", imageId, "."],
+      ["run", "--rm", "-v", `${assetsDirectory}:/data`, "-i", imageId, "hello.puml"],
       {
         env: { PATH },
         stdio: "inherit",
