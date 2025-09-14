@@ -25,3 +25,9 @@ jobs:
         run: npm run check-dependencies
       - name: Unit Tests
         run: npm run test
+      - name: Generate Coverage Report
+        run: npm run test-coverage
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{secrets.SONARCLOUD_TOKEN}}
