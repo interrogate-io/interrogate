@@ -7,7 +7,8 @@ RUN addgroup -S nonroot \
     && apk upgrade --available \
     && apk add --no-cache graphviz font-dejavu
 COPY --from=plantuml /opt/plantuml.jar /app/plantuml.jar
-USER nonroot
 WORKDIR /data
+RUN chown nonroot:nonroot /data
+USER nonroot
 ENTRYPOINT [ "java", "-Djava.awt.headless=true", "-jar", "/app/plantuml.jar" ]
 CMD [ "--help" ]
