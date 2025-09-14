@@ -53,6 +53,7 @@ describe("plantuml-cli Docker image", () => {
     if (imageId == null) {
       throw new Error("Could not create Docker image")
     }
+    exec("ls -la", { cwd: assetsDirectory })
     await runPlantUML({ assetsDirectory, imageId })
     const helloImage = PNG.sync.read(await readFile(`${assetsDirectory}/hello.png`))
     const referenceImage = PNG.sync.read(await readFile(`${assetsDirectory}/reference-hello.png`))
