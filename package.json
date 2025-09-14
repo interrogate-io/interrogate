@@ -12,6 +12,7 @@
     "lint": "lerna run lint",
     "prepare": "husky",
     "test": "lerna run test",
+    "test-coverage": "lcov-result-merger 'libs/*/coverage/lcov.info' lcov.info --prepend-source-files --prepend-path-fix '../'",
     "typecheck": "lerna run typecheck"
   },
   "workspaces": [
@@ -33,6 +34,7 @@
     "eslint-config-prettier": "10.1.8",
     "husky": "9.1.7",
     "jiti": "2.5.1",
+    "lcov-result-merger": "5.0.1",
     "lerna": "8.2.3",
     "prettier": "3.6.2",
     "react": "19.1.1",
