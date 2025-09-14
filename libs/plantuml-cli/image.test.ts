@@ -10,6 +10,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest"
 const exec = promisify(e)
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
+const { PATH = "" } = process.env
 const runPlantUML = async ({
   assetsDirectory,
   imageId,
@@ -22,6 +23,7 @@ const runPlantUML = async ({
       "docker",
       ["run", "--rm", "-v", `${assetsDirectory}:/data`, "-i", imageId, "."],
       {
+        env: { PATH },
         stdio: "inherit",
       },
     )
