@@ -4,7 +4,16 @@ import { defineConfig } from "vite"
 export default defineConfig({
   test: {
     coverage: {
-      exclude: ["dist", "eslint.config.ts", "src/index.ts", "vite.config.ts"],
+      exclude: [
+        "dist",
+        "eslint.config.ts",
+        "src/index.ts",
+        "vite.config.ts",
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+      ],
       provider: "v8",
       reporter: ["text", "json", "lcovonly", "html"],
     },
