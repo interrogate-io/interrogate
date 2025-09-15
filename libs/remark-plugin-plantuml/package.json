@@ -2,6 +2,11 @@
   "name": "@interrogate/remark-plugin-plantuml",
   "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "directory": "libs/remark-plugin-plantuml",
+    "type": "git",
+    "url": "https://github.com/interrogate-io/interrogate"
+  },
   "type": "module",
   "exports": {
     ".": {
