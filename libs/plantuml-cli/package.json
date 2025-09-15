@@ -2,7 +2,7 @@
   "name": "@interrogate/plantuml-cli",
   "private": true,
   "scripts": {
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test-ui": "vitest --ui"
   },
   "devDependencies": {
