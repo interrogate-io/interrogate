@@ -1,18 +1,7 @@
 import { spawn } from "child_process"
 import { userInfo } from "os"
+import { getDockerCommand } from "./get-docker-command"
 
-const getDockerCommand = () => {
-  switch (process.platform) {
-    case "linux":
-      return "/usr/bin/docker"
-    case "darwin":
-      return "/usr/local/bin/docker"
-    case "win32":
-      return "C:/Program Files/Docker/Docker/resources/bin/docker.exe"
-    default:
-      throw new Error(`Unsupported platform: ${process.platform}`)
-  }
-}
 export const runPlantUML = async ({
   assetsDirectory,
   diagram,
@@ -24,7 +13,7 @@ export const runPlantUML = async ({
 }) =>
   new Promise<Buffer>((resolve, reject) => {
     let png: Buffer | null = null
-    const dockerCommand = getDockerCommand()
+    const dockerCommand = getDockerCommand(process.platform)
     const { gid, uid } = userInfo()
     const childProcess = spawn(dockerCommand, [
       "run",
