@@ -16,5 +16,9 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "nxConsole.generateAiAgentRules": true,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "interrogate-io",
+    "projectKey": "interrogate-io_interrogate"
+  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
