@@ -1,4 +1,4 @@
-FROM plantuml/plantuml:1.2025.4 AS plantuml
+FROM plantuml/plantuml:1.2025.7 AS plantuml
 FROM azul/zulu-openjdk-alpine:24.0.2-24.32-jre
 RUN addgroup -S nonroot \
     && adduser -S nonroot -G nonroot \
