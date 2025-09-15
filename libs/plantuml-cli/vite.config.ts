@@ -4,6 +4,8 @@ import { defineConfig } from "vite"
 export default defineConfig({
   test: {
     coverage: {
+      all: true,
+      enabled: true,
       exclude: [
         "dist",
         "eslint.config.ts",
@@ -17,7 +19,7 @@ export default defineConfig({
         "**/*.test.tsx",
       ],
       provider: "v8",
-      reporter: ["text", "json", "lcovonly", "html"],
+      reporter: ["lcovonly", "html"],
     },
     environment: "node",
     globals: true,
