@@ -1,11 +1,11 @@
-name: PR Check
+name: Publish
 permissions:
-  contents: read
+  contents: write
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
 jobs:
-  build-and-test:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org/
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -35,3 +36,16 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@1a6d90ebcb0e6a6b1d87e37ba693fe453195ae25
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Configure Git User
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Version Packages
+        run: npm run lerna version --conventional-commits --yes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish
+        run: npm run lerna publish from-git --yes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
