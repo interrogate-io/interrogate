@@ -2,6 +2,11 @@
   "name": "@interrogate/rehype-plugin-plantuml",
   "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "directory": "libs/rehype-plugin-plantuml",
+    "type": "git",
+    "url": "https://github.com/interrogate-io/interrogate"
+  },
   "type": "module",
   "exports": {
     ".": {

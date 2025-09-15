@@ -2,6 +2,11 @@
   "name": "@interrogate/plantuml-to-svg",
   "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "directory": "libs/plantuml-to-svg",
+    "type": "git",
+    "url": "https://github.com/interrogate-io/interrogate"
+  },
   "type": "module",
   "exports": {
     ".": {
