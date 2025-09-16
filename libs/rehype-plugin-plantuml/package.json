@@ -1,6 +1,6 @@
 {
   "name": "@interrogate/rehype-plugin-plantuml",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "directory": "libs/rehype-plugin-plantuml",
@@ -39,13 +39,13 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@interrogate/plantuml-to-svg": "1.0.0",
+    "@interrogate/plantuml-to-svg": "1.1.0",
     "hast-util-from-html": "2.0.3",
     "to-vfile": "8.0.0",
     "unist-util-visit": "5.0.0"
   },
   "devDependencies": {
-    "@interrogate/remark-plugin-plantuml": "1.0.0",
+    "@interrogate/remark-plugin-plantuml": "1.1.0",
     "@types/hast": "3.0.4",
     "rehype-stringify": "10.0.1",
     "remark-parse": "11.0.0",
