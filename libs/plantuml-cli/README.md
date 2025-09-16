@@ -10,8 +10,9 @@ Lightweight Docker image for [PlantUML][plantuml-url] command-line diagram gener
 - **Image**: [interrogate/plantuml-cli][docker-url]
 - **Maintained by**: [interrogate-io](https://github.com/interrogate-io)
 - **Issues**: [GitHub Issues](https://github.com/interrogate-io/interrogate/issues)
-- **Supported architectures**: `amd64`
-- **Base image**: Azul Zulu JRE
+- **Supported architectures**: `amd64`, `arm64`
+- **Base image**: Azul Zulu JRE Alpine (24.0.2-24.32-jre)
+- **PlantUML Version**: 1.2025.7
 
 ## Quick start
 
@@ -24,13 +25,14 @@ This command will generate a PNG diagram from your PlantUML file.
 ## What is this?
 
 A Docker image that packages the PlantUML command-line interface with all necessary dependencies
-(including GraphViz) for generating diagrams. Built on Azul Zulu JRE for a minimal footprint, this
-image provides a reliable and portable way to render PlantUML diagrams.
+(including GraphViz) for generating diagrams. Built on Alpine Linux with Azul Zulu JRE for a minimal
+footprint, this image provides a reliable and portable way to render PlantUML diagrams. The image
+runs as a non-root user for enhanced security.
 
 ## Tags
 
 - `latest`: Latest stable release
-- `x.y.z`: Specific version releases
+- `1.2025.7`: Current specific version release
 
 ## Usage
 
@@ -82,8 +84,12 @@ docker run --rm \
 
 ## Image Details
 
-Only one variant is currently provided: Debian-based using Azul Zulu JRE, chosen for its minimal
-footprint while maintaining full PlantUML functionality.
+The image is based on Alpine Linux using Azul Zulu JRE, chosen for its minimal footprint while
+maintaining full PlantUML functionality. Security features include:
+
+- Non-root user execution
+- Alpine-based minimal image
+- Regular security updates via automated builds
 
 ## License
 
