@@ -24,8 +24,22 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist/*",
+    "CHANGELOG.md",
     "LICENSE",
     "README.md"
+  ],
+  "keywords": [
+    "hast",
+    "html",
+    "markdown",
+    "mdast",
+    "plantuml",
+    "plugin",
+    "rehype-plugin",
+    "rehype",
+    "remark-plugin",
+    "remark",
+    "unified"
   ],
   "scripts": {
     "build": "npm run build-esm && npm run build-cjs",
