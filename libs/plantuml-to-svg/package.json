@@ -25,8 +25,14 @@
   "files": [
     "bin/*",
     "dist/*",
+    "CHANGELOG.md",
     "LICENSE",
     "README.md"
+  ],
+  "keywords": [
+    "plantuml",
+    "svg",
+    "uml"
   ],
   "scripts": {
     "build": "npm run build-esm && npm run build-cjs",
