@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/interrogate-io/interrogate"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "exports": {
     ".": {
