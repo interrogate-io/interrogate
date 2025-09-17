@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/interrogate-io/interrogate/compare/@interrogate/plantuml-to-svg@1.1.0...@interrogate/plantuml-to-svg@1.1.1) (2025-09-17)
+
+**Note:** Version bump only for package @interrogate/plantuml-to-svg
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 # 1.1.0 (2025-09-16)
 
 ### Features

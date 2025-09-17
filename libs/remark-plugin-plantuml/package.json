@@ -1,6 +1,6 @@
 {
   "name": "@interrogate/remark-plugin-plantuml",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "repository": {
     "directory": "libs/remark-plugin-plantuml",
@@ -53,7 +53,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@interrogate/plantuml-to-svg": "1.1.0",
+    "@interrogate/plantuml-to-svg": "1.1.1",
     "to-vfile": "8.0.0",
     "unist-util-visit": "5.0.0"
   },
