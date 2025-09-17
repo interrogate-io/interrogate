@@ -55,6 +55,7 @@
   "dependencies": {
     "@interrogate/plantuml-to-svg": "1.1.1",
     "hast-util-from-html": "2.0.3",
+    "hast-util-select": "6.0.4",
     "to-vfile": "8.0.0",
     "unist-util-visit": "5.0.0"
   },

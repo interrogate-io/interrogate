@@ -46,12 +46,57 @@ import rehypePlantuml from "@interrogate/rehype-plugin-plantuml"
 const result = await rehype().use(rehypePlantuml).process(/* your HTML */)
 ```
 
+### Output Structure
+
+For code blocks, the default output structure is:
+
+```html
+<figure>
+  <pre><code class="language-plantuml"><!-- PlantUML source --></code></pre>
+  <svg><!-- Generated diagram --></svg>
+</figure>
+```
+
+For images (`.puml` files), the default output structure is:
+
+```html
+<figure>
+  <svg><!-- Generated diagram --></svg>
+</figure>
+```
+
 ## API
 
 ### `rehype().use(rehypePlantuml[, options])`
 
-Transform PlantUML diagram nodes into SVG during the HTML transformation process. Options
-documentation coming soon.
+Transform PlantUML diagram nodes into SVG during the HTML transformation process.
+
+#### Options
+
+```typescript
+{
+  // Show PlantUML source code for image references (default: false)
+  includeCodeForImages?: boolean,
+
+  // Place the diagram before the code block (default: false)
+  placeDiagramFirst?: boolean
+}
+```
+
+#### Example with Options
+
+```js
+import rehype from "rehype"
+import rehypePlantuml from "@interrogate/rehype-plugin-plantuml"
+
+// Show source code for images and place diagrams first
+const result = await rehype()
+  .use(rehypePlantuml, {
+    includeCodeForImages: true,
+    placeDiagramFirst: true,
+  })
+  .process(/* your HTML */)
+```
 
 ## License
 
