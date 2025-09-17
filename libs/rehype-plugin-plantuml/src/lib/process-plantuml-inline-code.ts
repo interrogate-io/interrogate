@@ -15,6 +15,7 @@ export const processPlantUMLInlineCode = async (
   node: Element,
   index?: number,
   parent?: Root | Element,
+  placeDiagramFirst = false,
 ) => {
   const {
     children: { 0: textNode },
@@ -33,7 +34,8 @@ export const processPlantUMLInlineCode = async (
         space: "html",
       }).children.filter(({ type }) => type !== "doctype")[0] as Element
       preElement.children.push(node)
-      parent.children.splice(index, 1, ...svg, preElement)
+      const newMarkup = placeDiagramFirst ? [...svg, preElement] : [preElement, ...svg]
+      parent.children.splice(index, 1, ...newMarkup)
     } else {
       node.children = svg
     }
