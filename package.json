@@ -19,13 +19,16 @@
     "apps/*",
     "libs/*"
   ],
+  "overrides": {
+    "webpack-dev-server": "5.2.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@commitlint/config-workspace-scopes": "19.8.1",
     "@eslint/js": "9.35.0",
     "@tsconfig/vite-react": "7.0.1",
-    "@types/node": "24.3.1",
+    "@types/node": "24.5.1",
     "@vitest/coverage-v8": "3.2.4",
     "@vitest/ui": "3.2.4",
     "dependency-cruiser": "17.0.1",
@@ -35,7 +38,7 @@
     "husky": "9.1.7",
     "jiti": "2.5.1",
     "lcov-result-merger": "5.0.1",
-    "lerna": "8.2.3",
+    "lerna": "8.2.4",
     "prettier": "3.6.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
@@ -46,9 +49,10 @@
     "remark-rehype": "11.1.2",
     "tsx": "4.20.5",
     "typescript": "5.9.2",
-    "typescript-eslint": "8.43.0",
+    "typescript-eslint": "8.44.0",
     "unified": "11.0.5",
     "vite": "7.1.5",
-    "vitest": "3.2.4"
+    "vitest": "3.2.4",
+    "webpack-dev-server": "5.2.2"
   }
 }
