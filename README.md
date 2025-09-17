@@ -27,8 +27,8 @@ This is a monorepo managed with [Lerna](https://lerna.js.org/) and uses Node.js 
 
 ### Prerequisites
 
-- Node.js v24.7.0 (or use nvm)
-- npm v10.x
+- Node.js v24.8.0 (or use nvm)
+- npm v11.x
 - Docker (for `plantuml-cli` development)
 
 ### Setup
