@@ -1,7 +1,7 @@
-import { spawn } from "child_process"
-import { dirname, normalize } from "path"
+import { spawn } from "node:child_process"
+import { dirname, normalize } from "node:path"
+import { fileURLToPath } from "node:url"
 import { optimize, type PluginConfig } from "svgo"
-import { fileURLToPath } from "url"
 import { getCommand } from "./get-command.js"
 
 const getFilename = () => {
