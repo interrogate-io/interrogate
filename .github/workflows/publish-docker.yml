@@ -16,23 +16,23 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PUBLISH_GITHUB }}
       - name: Login to Docker Hub
-        uses: docker/login-action@v3
+        uses: docker/login-action@184bdaa0721073962dff0199f1fb9940f07167d1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@29109295f81e9208d7d86ff1c6c12d2833863392
         with:
           platforms: linux/amd64,linux/arm64
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
       - name: Get PlantUML version
         id: get_plantuml_version
         run: |
           echo "version=$(grep -oP '(?<=plantuml/plantuml:)\d+\.\d+\.\d+' Dockerfile)" >> $GITHUB_OUTPUT
         working-directory: ./libs/plantuml-cli
       - name: Build and push
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83
         with:
           platforms: linux/amd64,linux/arm64
           push: true
