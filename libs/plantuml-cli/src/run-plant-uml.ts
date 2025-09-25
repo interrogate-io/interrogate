@@ -30,17 +30,17 @@ export const runPlantUML = async ({
       "-stdrpt",
     ])
     childProcess.stdout.on("data", (data: Buffer) => {
-      png = png != null ? Buffer.concat([png, data]) : data
+      png = png == null ? data : Buffer.concat([png, data])
     })
     childProcess.on("error", e => {
       reject(e)
       childProcess.kill()
     })
     childProcess.on("exit", () => {
-      if (png != null) {
-        resolve(png)
-      } else {
+      if (png == null) {
         reject(new Error("No svg was generated"))
+      } else {
+        resolve(png)
       }
     })
     process.on("exit", () => {
