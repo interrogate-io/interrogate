@@ -1,0 +1,3 @@
+@startuml "Hello"
+A -> B: "Hello"
+@enduml

@@ -1,0 +1,44 @@
+{
+  "name": "@interrogate/documentation",
+  "private": true,
+  "scripts": {
+    "build": "docusaurus build",
+    "check-dependencies": "depcruise src",
+    "clear": "docusaurus clear",
+    "deploy": "docusaurus deploy",
+    "docusaurus": "docusaurus",
+    "serve": "docusaurus serve",
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle",
+    "typecheck": "tsc",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "write-translations": "docusaurus write-translations"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/module-type-aliases": "3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@docusaurus/tsconfig": "3.8.1",
+    "@docusaurus/types": "3.8.1",
+    "@interrogate/rehype-plugin-plantuml": "1.2.0",
+    "@interrogate/remark-plugin-plantuml": "1.1.1",
+    "@mdx-js/react": "3.1.1",
+    "clsx": "2.1.1",
+    "glob": "11.0.3",
+    "prism-react-renderer": "2.4.1",
+    "rehype-raw": "7.0.0",
+    "webpack-dev-server": "5.2.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  }
+}

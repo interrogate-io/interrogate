@@ -1,0 +1,40 @@
+@startuml "Pharos Ping Context"
+!include <C4/C4_Context>
+Person(system_engineer, "System Engineer")
+Person(product_engineer, "Product Engineer")
+System(pharos_metrics, "Pharos Metrics")
+System(pharos_ping, "Pharos Ping")
+Boundary(oms, "OMS") {
+  System(config_provider_1, "Configuration Provider 1")
+  System(config_provider_2, "Configuration Provider 2")
+  System(config_provider_3, "Configuration Provider 3")
+}
+Boundary(public_internet, "Public Internet") {
+  System(external_service_1, "Workday Human Capital Management")
+  System(external_service_2, "Workday Planning")
+  System(external_service_3, "Additional External Systems...")
+}
+Rel(config_provider_1, pharos_ping, "Provides discoverability of service over Venice")
+Rel(config_provider_2, pharos_ping, "Provides discoverability of service over Venice")
+Rel(config_provider_3, pharos_ping, "Provides discoverability of service over Venice")
+Rel(pharos_metrics, system_engineer, "Checks network and endpoint health")
+Rel(pharos_metrics, product_engineer, "Checks application availability")
+Rel(pharos_ping, pharos_metrics, "Reports network and endpoint health timeseries metrics")
+Rel(external_service_1, pharos_ping, "Responds (or fails to respond) to ping")
+Rel(external_service_2, pharos_ping, "Responds (or fails to respond) to ping")
+Rel(external_service_3, pharos_ping, "Responds (or fails to respond) to ping")
+@enduml
+
+@startuml "Pharos Ping Containers"
+!include <C4/C4_Container>
+Boundary(pharos_ping, "Pharos Ping System") {
+  Container(configuration_manager, "Configuration Manager")
+  Container(blackbox_exporter, "Blackbox Exporter")
+  Container(prometheus, "Prometheus")
+}
+System(external_system, "Some Ping Target")
+Rel(external_system, blackbox_exporter, "Pings and collects metrics")
+Rel(blackbox_exporter, prometheus, "Reports metrics")
+Rel(configuration_manager, prometheus, "Provides ping targets")
+Rel(prometheus, blackbox_exporter, "Provides ping targets")
+@enduml

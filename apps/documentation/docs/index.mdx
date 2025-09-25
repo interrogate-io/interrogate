@@ -1,0 +1,31 @@
+---
+id: index
+title: "PlantUML Diagrams in Code"
+description: "Shows usage for PlantUML Remark and Rehype Plugins"
+---
+
+You can write PlantUML code directly inside of code blocks. The rendered diagram will show up
+immediately after the code block default. For example, if I write the codeblock:
+
+````markdown
+```plantuml
+@startuml
+A -> B:"Hello"
+@enduml
+```
+````
+
+it is rendered thusly:
+
+```plantuml
+@startuml
+A -> B:"Hello"
+@enduml
+```
+
+It's also possible to refer to external diagram files with the `.puml` suffix as if they were
+images, and they'll be rendered directly into the document. So that I can write:
+`![hello](./hello.puml)` (referring to a hello.puml file in the same directory as my markdown), and
+it will show up like this:
+
+![hello](./hello.puml)

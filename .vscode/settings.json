@@ -3,7 +3,8 @@
     "plantuml-cli",
     "plantuml-to-svg",
     "remark-plugin-plantuml",
-    "rehype-plugin-plantuml"
+    "rehype-plugin-plantuml",
+    "documentation"
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"

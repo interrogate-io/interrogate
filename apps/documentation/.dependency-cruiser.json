@@ -1,0 +1,15 @@
+{
+  "extends": "dependency-cruiser/configs/recommended-strict",
+  "forbidden": [
+    {
+      "name": "no-orphans",
+      "severity": "warn"
+    }
+  ],
+  "options": {
+    "tsConfig": {
+      "fileName": "./tsconfig.json"
+    },
+    "tsPreCompilationDeps": true
+  }
+}
