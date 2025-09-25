@@ -1,5 +1,5 @@
 import type { Element } from "hast"
-import { normalize } from "path"
+import { normalize } from "node:path"
 import { read } from "to-vfile"
 import { getDirectory } from "./get-directory.js"
 

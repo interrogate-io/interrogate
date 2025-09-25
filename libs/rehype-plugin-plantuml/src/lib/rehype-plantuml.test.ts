@@ -1,11 +1,11 @@
 import remarkPlantUML from "@interrogate/remark-plugin-plantuml"
-import { dirname, normalize } from "path"
+import { dirname, normalize } from "node:path"
+import { fileURLToPath } from "node:url"
 import rehypeStringify from "rehype-stringify"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import { read } from "to-vfile"
 import { unified } from "unified"
-import { fileURLToPath } from "url"
 import { describe, expect, it, vi } from "vitest"
 import rehypePlantUML from "./rehype-plantuml.js"
 

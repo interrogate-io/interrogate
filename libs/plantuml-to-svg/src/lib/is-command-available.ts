@@ -1,5 +1,5 @@
-import { exec as e } from "child_process"
-import { promisify } from "util"
+import { exec as e } from "node:child_process"
+import { promisify } from "node:util"
 
 const exec = promisify(e)
 const Commands = {

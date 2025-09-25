@@ -1,4 +1,4 @@
-import { dirname, extname } from "path"
+import { dirname, extname } from "node:path"
 
 export const getDirectory = (path: string) => {
   const ext = extname(path)

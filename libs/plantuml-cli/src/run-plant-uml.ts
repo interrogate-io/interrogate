@@ -1,5 +1,5 @@
-import { spawn } from "child_process"
-import { userInfo } from "os"
+import { spawn } from "node:child_process"
+import { userInfo } from "node:os"
 import { getDockerCommand } from "./get-docker-command"
 
 export const runPlantUML = async ({

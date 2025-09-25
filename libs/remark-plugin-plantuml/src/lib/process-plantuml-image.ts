@@ -1,6 +1,6 @@
 import { plantUMLToSVG } from "@interrogate/plantuml-to-svg"
 import type { Definition, Image, ImageReference, Node } from "mdast"
-import { dirname, extname, normalize } from "path"
+import { dirname, extname, normalize } from "node:path"
 import { read } from "to-vfile"
 const isDefinition = (node: Node): node is Definition => {
   return node.type === "definition"
