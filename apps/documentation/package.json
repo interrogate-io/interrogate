@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "build": "docusaurus build",
-    "check-dependencies": "depcruise src",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",
