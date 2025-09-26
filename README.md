@@ -2,6 +2,7 @@
 
 [![License: MIT][license-badge]][license-url]
 [![Contributor Covenant][covenant-badge]][covenant-url]
+[![Known Vulnerabilities](https://snyk.io/test/github/interrogate-io/interrogate/badge.svg)](https://snyk.io/test/github/interrogate-io/interrogate)
 
 A collection of tools for working with PlantUML diagrams in modern JavaScript/TypeScript
 applications.
