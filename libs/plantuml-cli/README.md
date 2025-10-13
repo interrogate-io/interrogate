@@ -12,7 +12,7 @@ Lightweight Docker image for [PlantUML][plantuml-url] command-line diagram gener
 - **Issues**: [GitHub Issues](https://github.com/interrogate-io/interrogate/issues)
 - **Supported architectures**: `amd64`, `arm64`
 - **Base image**: Azul Zulu JRE Alpine (24.0.2-24.32-jre)
-- **PlantUML Version**: 1.2025.7
+- **PlantUML Version**: 1.2025.8
 
 ## Quick start
 
@@ -32,7 +32,7 @@ runs as a non-root user for enhanced security.
 ## Tags
 
 - `latest`: Latest stable release
-- `1.2025.7`: Current specific version release
+- `1.2025.8`: Current specific version release
 
 ## Usage
 
