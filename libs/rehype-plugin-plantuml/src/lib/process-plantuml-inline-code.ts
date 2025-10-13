@@ -32,7 +32,7 @@ export const processPlantUMLInlineCode = async (
       const preElement = fromHtml("<pre />", {
         fragment: true,
         space: "html",
-      }).children.filter(({ type }) => type !== "doctype")[0] as Element
+      }).children.find(({ type }) => type !== "doctype") as Element
       preElement.children.push(node)
       const newMarkup = placeDiagramFirst ? [...svg, preElement] : [preElement, ...svg]
       parent.children.splice(index, 1, ...newMarkup)

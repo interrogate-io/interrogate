@@ -15,7 +15,7 @@ export const plantUMLImageToPlantUMLCodeElement = ({ svg, node, parent, value }:
       space: "html",
     },
   )
-  const code = (codeRoot.children.filter(({ type }) => type !== "doctype") as ElementContent[])[0]
+  const code = codeRoot.children.find(({ type }) => type !== "doctype") as ElementContent
   const index = parent?.children.indexOf(node)
   if (index != null) {
     parent?.children.splice(index, 1, code)
