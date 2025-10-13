@@ -87,10 +87,10 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
         childProcess.kill()
       })
       childProcess.on("exit", () => {
-        if (svg != null) {
-          resolve(svg)
-        } else {
+        if (svg == null) {
           reject(new Error("No svg was generated"))
+        } else {
+          resolve(svg)
         }
       })
       process.on("exit", () => {
