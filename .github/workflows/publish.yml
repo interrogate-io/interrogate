@@ -43,7 +43,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
       - name: Version Packages
-        run: npm run lerna version -- --conventional-commits --yes
+        run: npm run lerna version -- --exact --conventional-commits --yes
         env:
           GH_TOKEN: ${{ secrets.PUBLISH_GITHUB }}
       - name: Publish
