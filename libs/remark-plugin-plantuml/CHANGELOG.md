@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/interrogate-io/interrogate/compare/@interrogate/remark-plugin-plantuml@1.1.4...@interrogate/remark-plugin-plantuml@1.1.5) (2025-10-27)
+
+**Note:** Version bump only for package @interrogate/remark-plugin-plantuml
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.1.4](https://github.com/interrogate-io/interrogate/compare/@interrogate/remark-plugin-plantuml@1.1.3...@interrogate/remark-plugin-plantuml@1.1.4) (2025-10-13)
 
 **Note:** Version bump only for package @interrogate/remark-plugin-plantuml
