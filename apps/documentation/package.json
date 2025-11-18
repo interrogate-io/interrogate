@@ -25,7 +25,7 @@
     "@interrogate/remark-plugin-plantuml": "1.1.6",
     "@mdx-js/react": "3.1.1",
     "clsx": "2.1.1",
-    "glob": "11.0.3",
+    "glob": "11.1.0",
     "prism-react-renderer": "2.4.1",
     "rehype-raw": "7.0.0",
     "webpack-dev-server": "5.2.2"
