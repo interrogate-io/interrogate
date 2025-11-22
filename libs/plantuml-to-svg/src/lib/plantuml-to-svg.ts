@@ -19,7 +19,7 @@ const DOCKER_ARGS = [
   "run",
   "--rm",
   "-i",
-  "interrogate/plantuml-cli:1.2025.8",
+  "interrogate/plantuml-cli:1.2025.10",
   "-pipeNoStdErr",
   "-noerror",
   "-pipe",

@@ -5,7 +5,8 @@ describe("plantUMLToSVG", () => {
     const value = await plantUMLToSVG("A -> B: Hello")
     expect(value).toContain('data-diagram-type="SEQUENCE"')
   })
-  it("should reject when given nonsense", async () => {
-    await expect(async () => plantUMLToSVG("foo")).rejects.toThrow("string:2:error:Syntax Error?")
+  it("should return a Syntax Error SVG when given nonsense", async () => {
+    const value = await plantUMLToSVG("foo")
+    expect(value).toContain("Syntax Error?")
   })
 })
