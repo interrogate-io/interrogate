@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/interrogate-io/interrogate/compare/@interrogate/rehype-plugin-plantuml@1.2.9...@interrogate/rehype-plugin-plantuml@1.2.10) (2025-11-22)
+
+**Note:** Version bump only for package @interrogate/rehype-plugin-plantuml
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.2.9](https://github.com/interrogate-io/interrogate/compare/@interrogate/rehype-plugin-plantuml@1.2.8...@interrogate/rehype-plugin-plantuml@1.2.9) (2025-11-22)
 
 **Note:** Version bump only for package @interrogate/rehype-plugin-plantuml
