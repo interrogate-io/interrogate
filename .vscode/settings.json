@@ -21,5 +21,6 @@
     "connectionId": "interrogate-io",
     "projectKey": "interrogate-io_interrogate"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "snyk.advanced.autoSelectOrganization": true
 }
