@@ -24,11 +24,11 @@ applications.
 
 ## Development
 
-This is a monorepo managed with [Lerna](https://lerna.js.org/) and uses Node.js v25.2.1.
+This is a monorepo managed with [Lerna](https://lerna.js.org/) and uses Node.js v25.3.0.
 
 ### Prerequisites
 
-- Node.js v25.2.1 (or use nvm)
+- Node.js v25.3.0 (or use nvm)
 - npm v11.x
 - Docker (for `plantuml-cli` development)
 
