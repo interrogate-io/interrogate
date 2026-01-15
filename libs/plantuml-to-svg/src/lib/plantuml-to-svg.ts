@@ -71,7 +71,10 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
       childProcess.stdout.on("data", (data: Buffer) => {
         try {
           const rawResponse = data.toString("utf-8")
-          if (!rawResponse.trim().toLowerCase().startsWith("<svg")) {
+          if (
+            !rawResponse.trim().toLowerCase().startsWith("<svg") &&
+            !rawResponse.trim().toLowerCase().startsWith("<?plantuml")
+          ) {
             throw new Error(rawResponse)
           }
           svg = optimize(rawResponse, {
