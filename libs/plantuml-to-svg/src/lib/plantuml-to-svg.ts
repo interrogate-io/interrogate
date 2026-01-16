@@ -72,14 +72,15 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
         try {
           const rawResponse = data.toString("utf-8")
           if (
-            !rawResponse.trim().toLowerCase().startsWith("<svg") &&
-            !rawResponse.trim().toLowerCase().startsWith("<?plantuml")
+            rawResponse.trim().toLowerCase().startsWith("<svg") ||
+            rawResponse.trim().toLowerCase().startsWith("<?plantuml")
           ) {
+            svg = optimize(rawResponse, {
+              plugins,
+            }).data
+          } else {
             throw new Error(rawResponse)
           }
-          svg = optimize(rawResponse, {
-            plugins,
-          }).data
         } catch (e) {
           reject(e as Error)
           childProcess.emit("error", e)
