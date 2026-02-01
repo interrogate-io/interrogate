@@ -3,18 +3,6 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.16](https://github.com/interrogate-io/interrogate/compare/@interrogate/plantuml-to-svg@1.1.15...@interrogate/plantuml-to-svg@1.1.16) (2026-02-01)
-
-### Reverts
-
-- :rewind: Undo failed "chore: publish"
-  ([21afaad](https://github.com/interrogate-io/interrogate/commit/21afaad88595328923d636d079e2ba20ffb9774c))
-
-# Change Log
-
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## [1.1.15](https://github.com/interrogate-io/interrogate/compare/@interrogate/plantuml-to-svg@1.1.14...@interrogate/plantuml-to-svg@1.1.15) (2026-01-16)
 
 **Note:** Version bump only for package @interrogate/plantuml-to-svg
