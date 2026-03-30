@@ -46,11 +46,12 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "svgo": "4.0.0"
+    "svgo": "4.0.1"
   },
   "devDependencies": {
+    "@types/node": "25.5.0",
     "@types/svg-parser": "2.0.6",
     "svg-parser": "2.0.4",
-    "vitest": "4.0.18"
+    "vitest": "4.1.2"
   }
 }
