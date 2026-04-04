@@ -49,7 +49,7 @@
     "svgo": "4.0.1"
   },
   "devDependencies": {
-    "@types/node": "25.5.0",
+    "@types/node": "25.5.2",
     "@types/svg-parser": "2.0.6",
     "svg-parser": "2.0.4",
     "vitest": "4.1.2"
