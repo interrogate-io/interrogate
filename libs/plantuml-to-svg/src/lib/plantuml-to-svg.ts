@@ -19,7 +19,7 @@ const DOCKER_ARGS = [
   "run",
   "--rm",
   "-i",
-  "interrogate/plantuml-cli:1.2025.10",
+  "interrogate/plantuml-cli:1.2026.2",
   "-pipeNoStdErr",
   "-noerror",
   "-pipe",
@@ -29,7 +29,7 @@ const DOCKER_ARGS = [
 const JAVA_ARGS = [
   "-Djava.awt.headless=true",
   "-jar",
-  "plantuml-mit-1.2025.10.jar",
+  "plantuml-mit-1.2026.2.jar",
   "-pipeNoStdErr",
   "-noerror",
   "-pipe",
