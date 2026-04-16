@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "@interrogate/monkeys-in-a-barrel-mcp": {
+      "command": "node",
+      "args": ["${workspaceFolder}/libs/monkeys-in-a-barrel-mcp/dist/index.js"]
+    }
+  }
+}
