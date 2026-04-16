@@ -4,7 +4,8 @@
     "plantuml-to-svg",
     "remark-plugin-plantuml",
     "rehype-plugin-plantuml",
-    "documentation"
+    "documentation",
+    "monkeys-in-a-barrel-mcp"
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"

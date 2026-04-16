@@ -1,0 +1,54 @@
+{
+  "name": "@interrogate/monkeys-in-a-barrel-mcp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "directory": "libs/monkeys-in-a-barrel-mcp",
+    "type": "git",
+    "url": "https://github.com/interrogate-io/interrogate"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "bin/*",
+    "dist/*",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "shenanigans"
+  ],
+  "scripts": {
+    "build": "npm run build-esm",
+    "build-esm": "tsc --project tsconfig.build.json",
+    "check-dependencies": "depcruise src",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "test": "vitest run --coverage",
+    "test-ui": "vitest --ui",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.0",
+    "vitest": "4.1.4"
+  }
+}

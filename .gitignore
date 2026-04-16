@@ -150,6 +150,7 @@ vite.config.ts.timestamp-*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+!.vscode/mcp.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 !*.code-workspace
