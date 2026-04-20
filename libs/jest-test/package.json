@@ -27,7 +27,7 @@
     "check-dependencies": "depcruise src",
     "format": "prettier . --write",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --coverage",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
