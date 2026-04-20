@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/vite-react/tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "tsBuildInfoFile": null,
+    "types": ["node"]
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "dist",
+    "eslint.config.ts",
+    "node_modules",
+    "coverage",
+    "vite.config.ts"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
