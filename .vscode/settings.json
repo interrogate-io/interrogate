@@ -5,7 +5,8 @@
     "remark-plugin-plantuml",
     "rehype-plugin-plantuml",
     "documentation",
-    "monkeys-in-a-barrel-mcp"
+    "monkeys-in-a-barrel-mcp",
+    "jest-test"
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
