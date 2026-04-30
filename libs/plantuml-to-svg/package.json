@@ -52,6 +52,6 @@
     "@types/node": "25.6.0",
     "@types/svg-parser": "2.0.6",
     "svg-parser": "2.0.4",
-    "vitest": "4.1.4"
+    "vitest": "4.1.5"
   }
 }

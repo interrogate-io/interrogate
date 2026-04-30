@@ -12,7 +12,7 @@ type Options = {
   placeDiagramFirst: boolean
 }
 const rehypePlantUML = (
-  { includeCodeForImages = false, placeDiagramFirst = false } = {} as Partial<Options>,
+  { includeCodeForImages = false, placeDiagramFirst = false } = {} satisfies Partial<Options>,
 ) => {
   return async (tree: Root, { cwd, path }: VFile) => {
     const imgTransforms: Promise<Root | Element | undefined>[] = []

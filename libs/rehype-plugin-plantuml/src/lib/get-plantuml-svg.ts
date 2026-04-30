@@ -16,7 +16,7 @@ export const getPlantUMLSVG = async ({ node, value }: Options) => {
   try {
     return await plantUMLToSVG(value)
   } catch (e: unknown) {
-    console.error(e as Error)
+    console.error(e)
   }
   return "<svg></svg>"
 }
