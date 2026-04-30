@@ -81,7 +81,8 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
           } else {
             throw new Error(rawResponse)
           }
-        } catch (e) {
+        } catch (e: unknown) {
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
           reject(e as Error)
           childProcess.emit("error", e)
         }
@@ -108,7 +109,8 @@ export const plantUMLToSVG = async (plantUMLMarkup: string, options = {} as Part
       })
       childProcess.stdin.write(plantUMLMarkup)
       childProcess.stdin.end()
-    } catch (e) {
+    } catch (e: unknown) {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
       reject(e as Error)
     }
   })

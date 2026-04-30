@@ -16,12 +16,12 @@
     "write-translations": "docusaurus write-translations"
   },
   "devDependencies": {
-    "@docusaurus/core": "3.10.0",
-    "@docusaurus/faster": "3.10.0",
-    "@docusaurus/module-type-aliases": "3.10.0",
-    "@docusaurus/preset-classic": "3.10.0",
-    "@docusaurus/tsconfig": "3.10.0",
-    "@docusaurus/types": "3.10.0",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/faster": "3.10.1",
+    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@docusaurus/tsconfig": "3.10.1",
+    "@docusaurus/types": "3.10.1",
     "@interrogate/rehype-plugin-plantuml": "*",
     "@interrogate/remark-plugin-plantuml": "*",
     "@mdx-js/react": "3.1.1",
