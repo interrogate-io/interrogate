@@ -67,6 +67,6 @@
     "remark-rehype": "11.1.2",
     "unified": "11.0.5",
     "vfile": "6.0.3",
-    "vitest": "4.1.5"
+    "vitest": "4.1.6"
   }
 }
